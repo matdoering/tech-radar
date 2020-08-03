@@ -2,8 +2,8 @@
 
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<title>Zalando Tech Radar</title>
-<link rel="shortcut icon" href="https://www.zalando.de/favicon.ico">
+<title>Data Science Tech Radar</title>
+<link rel="shortcut icon" href="https://www.datascienceblog.net/favicon.ico">
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="radar.js"></script>
@@ -25,7 +25,7 @@ radar_visualization({
     grid: "#bbb",
     inactive: "#ddd"
   },
-  title: "Zalando Tech Radar — 2020.07",
+  title: "Data ScienceTech Radar — 2020/07",
   quadrants: [
     { name: "Languages" },
     { name: "Infrastructure" },
@@ -779,17 +779,22 @@ radar_visualization({
 <tr>
 <td>
 
-<h3>What is the Tech Radar?</h3>
+<h3>What is the data science tech radar?</h3>
 
 <p>
-The Zalando Tech Radar is a list of technologies, complemented by an assessment result, called <em>ring assignment</em>. We use four rings with the following semantics:
+The tech radar visualizes an evaluation of available data science technologies. The individual rings
+in the radar chart indicate the evaluations of technologies. From inside to outside these categories are:
 </p>
 
 <ul>
-<li><strong>ADOPT</strong> &mdash; Technologies we have high confidence in to serve our purpose, also in large scale. Technologies with a usage culture in our Zalando production environment, low risk and recommended to be widely used.</li>
-<li><strong>TRIAL</strong> &mdash; Technologies that we have seen work with success in project work to solve a real problem; first serious usage experience that confirm benefits and can uncover limitations. TRIAL technologies are slightly more risky; some engineers in our organization walked this path and will share knowledge and experiences.</li>
-<li><strong>ASSESS</strong> &mdash; Technologies that are promising and have clear potential value-add for us; technologies worth to invest some research and prototyping efforts in to see if it has impact. ASSESS technologies have higher risks; they are often brand new and highly unproven in our organisation. You will find some engineers that have knowledge in the technology and promote it, you may even find teams that have started a prototyping effort.</li>
-<li><strong>HOLD</strong> &mdash; Technologies not recommended to be used for new projects. Technologies that we think are not (yet) worth to (further) invest in. HOLD technologies should not be used for new projects, but usually can be continued for existing projects.</li>
+<li><strong>ADOPT</strong> &mdash; Technologies that are widely used and are known to excel in data science projects. If you choose these technologies,
+    you are standing on solid footing. Note that it is still necessary to weigh the pros and cons of technologies depending on the specific application scenario.</li>
+<li><strong>TRIAL</strong> &mdash; Technologies that are popular in some contexts but still have to evaluated in others. Selecting a technology
+    from this technology is slightly riskier than choosing a technology from the ADOPT category.</li>
+<li><strong>ASSESS</strong> &mdash; Promising technologies that are still new and have potential for widespread use. Technologies in this category
+    are riskier because the community still needs to gain more experiences in utilizing these technologies.</li> 
+<li><strong>HOLD</strong> &mdash; Technologies that should be avoided in new projects. A technology may be on HOLD because it has become outdated
+    or because the technology is not yet sufficiently mature.</li>
 </ul>
 
 </td><td>
@@ -797,21 +802,27 @@ The Zalando Tech Radar is a list of technologies, complemented by an assessment 
 <h3>What is the purpose?</h3>
 
 <p>
-The Tech Radar is a tool to inspire and support engineering teams at Zalando to pick the best technologies for new projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology decisions and continuously evolve our technology landscape. Based on the <a href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>, our Tech Radar sets out the changes in technologies that are interesting in software development &mdash; changes that we think our engineering teams should pay attention to and consider using in their projects.
-</p>
+Choosing technologies is hard. Technology choices have to be based on the specific requirements of individual projects.
+Still, it is possible to provide some general guidance. For example, some technologies are not very suitable for data science
+and can therefore be ruled out in most cases. Similarly, there are evergreen technologies whose application is nearly risk-free.
 
-<h3>How do we maintain it?</h3>
+This visualization aims at giving you an overview of data science technologies and how they should be handled when starting out a new project.
+</p>
+hno
+<h3>How are the decisions made?</h3>
 
 <p>
-The Tech Radar is maintained by the <em>Zalando Technologists Guild</em> &mdash; an open group of  senior Zalando technologists committed to devote time to the Tech Radar purpose. The guild self organises to maintain the Tech Radar documents, including this public version. Assignment of technologies to rings is the outcome of ring change proposals, which are discussed and voted on in guild meetings. The Tech Radar depends on active participation and input from all engineering teams at Zalando.
+This data science tech radar is maintained by <a href="https://datascienceblog.net">Matthias Döring</a>.
+The decisions are made based on his personal and professional experiences with the technologies.
+In order to integrate the knowledge and experience from the data science community,
+please get in touch if you feel that any technology is missing/misplaced. If you make a contribution,
+you will of course receive an honorable mention in the acknowledgements section.
 </p>
 
+<h3>Acknowledgements</h3>
 <p>
-There is also an <a href="https://techradar.zalando.net/">internal version of the Tech Radar</a> that contains background information about each technology &mdash; when to use it, pros and cons, main risks, which teams at Zalando are using it, and for what purpose.
-</p>
-
-<p>
-<em>BTW, if you would like to create your own Tech Radar &mdash; we have <a href="https://github.com/zalando/tech-radar">open sourced the code</a> to generate this visualization.</em>
+This tech radar is based on the <a href="https://github.com/zalando/tech-radar">Zalando Tech Radar</a>, which in turn is based on the
+<a href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>.
 </p>
 
 </td></tr>
