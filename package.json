@@ -8,7 +8,7 @@
   "directories": {
     "doc": "docs"
   },
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.26.3",
     "eslint": "^5.7.0",
     "htmllint": "^0.7.2"
