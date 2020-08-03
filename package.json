@@ -1,9 +1,9 @@
 {
-  "name": "zalando-tech-radar",
+  "name": "data-science-tech-radar",
   "version": "2018.5.0",
-  "description": "Visualizing our technology choices",
-  "homepage": "https://github.com/zalando/tech-radar#readme",
-  "repository": "https://github.com/zalando/tech-radar.git",
+  "description": "Visualizing data science technology decisions",
+  "homepage": "https://github.com/matdoering/tech-radar",
+  "repository": "https://github.com/matdoering/tech-radar",
   "license": "MIT",
   "directories": {
     "doc": "docs"
@@ -18,5 +18,8 @@
     "lint": "npm run lint:js && npm run lint:html",
     "lint:js": "eslint docs/*.js",
     "lint:html": "htmllint docs/*.html"
+  },
+   "engines": {
+    "yarn": "1.22.4"
   }
 }
