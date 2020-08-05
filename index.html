@@ -613,7 +613,7 @@ radar_visualization({
       {
         quadrant: 0,
         ring: 1,
-        label: "Juliac",
+        label: "Julia",
         active: true,
         link: "#julia",
         moved: 0
@@ -624,6 +624,14 @@ radar_visualization({
         label: "C++",
         active: true,
         link: "#cpp",
+        moved: 0
+      },
+      {
+        quadrant: 0,
+        ring: 3,
+        label: "C",
+        active: true,
+        link: "#c",
         moved: 0
       },
       {
@@ -648,6 +656,14 @@ radar_visualization({
         label: "Python",
         active: true,
         link: "python.html",
+        moved: 0
+      },
+      {
+        quadrant: 0,
+        ring: 1,
+        label: "Bash",
+        active: true,
+        link: "#bash",
         moved: 0
       },
       {
@@ -684,10 +700,26 @@ radar_visualization({
       },
       {
         quadrant: 0,
+        ring: 3,
+        label: "Matlab",
+        active: true,
+        link: "#matlab",
+        moved: 0
+      },
+      {
+        quadrant: 0,
         ring: 2,
         label: "Rust",
         active: true,
         link: "#rust",
+        moved: 0
+      },
+      {
+        quadrant: 0,
+        ring: 3,
+        label: "PHP",
+        active: true,
+        link: "#php",
         moved: 0
       },
       {
@@ -774,6 +806,19 @@ are often deployed in forms of APIs, this is a must-have.
 
 <h3>Programming Languages</h3>
 
+<h4 id="bash">Bash</h4>
+<p>
+Bash is a shell language that excels at working with files and programs at the unix system level. Many data applications
+require the successful executiong of several programs or data wrangling, for which Bash is ideal. Ideally, Bash scripts should be
+relatively small. For complex file system task, other solutions should be considered.
+</p>
+
+<h4 id="c">C</h4>
+<p>
+C is a low-level language that is particularly suited for all applications that work closely with the hardware of a system,
+for example oeprating systems such as Linux or embedded systems. However, it is not a language that is very useful for data science.
+</p>
+
 <h4 id="cpp">C++</h4>
 <p>
 Similarly to Java, C++ is a well-established high-level programming language. However, in contrast to Java,
@@ -813,9 +858,9 @@ which can be useful if you know that clients can handle the load.
 
 <h4 id="julia">Julia</h4>
 <p>
-Julia is a language that is gaining more and more traction in the data science community. The main reason for that is that
-Julia allows for <a href="https://hackernoon.com/freeing-the-data-scientist-mind-from-the-curse-of-vectorization-julia-to-the-rescue-0c3z308v">C-like performance</a>. However, this is only possible because Julia is a compiled language. That is why Julia will probably never become the go-to language
-for data exploration. But, if you have demanding calculations, you should definitely evaluate Julia.
+Julia is a language that is gaining more and more traction in the data science community. The main reason for this its usability and its
+<a href="https://hackernoon.com/freeing-the-data-scientist-mind-from-the-curse-of-vectorization-julia-to-the-rescue-0c3z308v">C-like performance</a>. However, this is only possible because Julia is a compiled language. Despite its support in Jupyter notebooks, Julia will probably never become the go-to language
+for data exploration due to the lag that caused by the compilations. But, if you have demanding calculations, you should definitely evaluate Julia.
 </p>
 
 <h4 id="kotlin">Kotlin</h4>
@@ -823,6 +868,20 @@ for data exploration. But, if you have demanding calculations, you should defini
 Similarly to Java, Kotlin is based on the Java Virtual Machine. Kotlin, however, is a leaner language than Java. For example,
 it does not enforce object-oriented development. Moreover, <a href="https://kotlinlang.org/docs/reference/android-overview.html">Kotlin is compatible with Android devices</a>, which makes it
 great for the mobile market. However, all of these areas are not very relevant for data science.
+</p>
+
+<h4 id="matlab">Matlab</h4>
+<p>
+<a href="https://www.mathworks.com/products/matlab.html">Matlab</a> is a commercial language that is geared towards
+<a href="https://tobydriscoll.net/blog/matlab-vs.-julia-vs.-python/">mathematical calculations</a>,
+which is why it has collected some users in the data science sphere. However, with Julia there is a strong, freely available
+competitor on the market.
+</p>
+
+<h4 id="php">PHP</h4>
+<p>
+Once the star of web development, <a href="https://jaxenter.com/php-tiobe-sept-2019-162096.html">PHP has fallen from grace in recent years</a>.
+This is mainly due to the wide adoption of JavaScript over PHP.
 </p>
 
 <h4 id="r">R</h4>
@@ -853,7 +912,6 @@ Typescript is a variant of JavaScript that offers a typing system. The goal of T
 JavaScript applications more stable. However, the question is whether the <a href="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b">additional burden during the implementation is worth it</a>. If you want to move fast, JavaScript is preferable.
 </p>
 
-TODO: bash, julia
 <h3>What is the data science tech radar?</h3>
 
 <p>
