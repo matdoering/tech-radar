@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html>
 
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<title>Data Science Tech Radar</title>
+<title>Data Science and AI Tech Radar</title>
 <link rel="shortcut icon" href="https://www.datascienceblog.net/favicon.ico">
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -25,7 +26,7 @@ radar_visualization({
     grid: "#bbb",
     inactive: "#ddd"
   },
-  title: "Data ScienceTech Radar — 2020/07",
+  title: "Data Science and AI Tech Radar — 2020/07",
   quadrants: [
     { name: "Languages" },
     { name: "Infrastructure" },
@@ -39,7 +40,6 @@ radar_visualization({
     { name: "HOLD", color: "#efafa9" }
   ],
   print_layout: true,
-  // zoomed_quadrant: 0,
   //ENTRIES
   entries: [
       {
@@ -596,18 +596,26 @@ radar_visualization({
       },
       {
         quadrant: 0,
-        ring: 0,
+        ring: 1,
         label: "Go",
         active: true,
-        link: "go.html",
+        link: "#golang",
         moved: 0
       },
       {
         quadrant: 0,
-        ring: 0,
+        ring: 1,
+        label: "C++",
+        active: true,
+        link: "#cpp",
+        moved: 0
+      },
+      {
+        quadrant: 0,
+        ring: 3,
         label: "Java",
         active: true,
-        link: "java.html",
+        link: "#java",
         moved: 0
       },
       {
@@ -692,10 +700,10 @@ radar_visualization({
       },
       {
         quadrant: 0,
-        ring: 2,
+        ring: 0,
         label: "R",
         active: true,
-        link: "r.html",
+        link: "#r",
         moved: 0
       },
       {
@@ -779,6 +787,45 @@ radar_visualization({
 <tr>
 <td>
 
+<h3>Programming Languages</h3>
+
+<h4 id="cpp">C++</h4>
+<p>
+Similarly to Java, C++ is a well-established high-level programming language. However, in contrast to Java,
+C++ is geared towards fine-grained control over sytem resources. For example, C++ does not have an automatic
+garbage collection but requires developers to think about how they manage memory. While C++ allows for very efficient and stable
+software, development is typically considerably slower than in other languages due to a lack of supporting libraries,
+long compile times, and the intricacies of the language. HoweverA, if performance is a prime goal of the software,
+C++ is probably the way to go. It is no coincidence that the core of <a href="https://github.com/tensorflow/tensorflow>">Tensorflow</a>
+is written in C++. While C++ is not suitable for data science tasks, it excels when engineering large-scale AI systems
+for which performance is key.
+</p>
+
+<h4 id="golang">Go</h4>
+<p>
+<a href="https://golang.org/">Go</a> is a minimalist, compiled language that was developed by Google: <a href="https://yourbasic.org/golang/advantages-over-java-python/">it is performant, type-safe, and transparent</a>. However, there is currently <a href="https://101.datascience.community/2019/04/26/golang-for-data-science/">little support for data exploration</a>,
+which means that Go is not suitable for typical data science tasks. However, <a href="https://medium.com/@calebkaiser/why-were-writing-machine-learning-infrastructure-in-go-not-python-38d6a37e2d76">Go is well-suited for infrastructure management tasks</a>, for example for model deployment.
+So, while Go will probably never become a typical language data scientists will use, it should be considered for AI engineering tasks.
+</p>
+
+<h4 id="java">Java</h4>
+<p>
+Java has been the most widely used high-level programming language for a long time now. Due to its virtual machine,
+Java applications are independent of the system architecture, rendering Java code highly portable. Java has an active
+community and has great ecosystems for overall software engineering, for example, due to highly developed IDEs
+that are very convenient to use. However, Java does not really support the data science process. Thus,
+Java likely only plays a role if models have to be integrated into an existing Java application.
+</p>
+
+<h4 id="r">R</h4>
+<p>
+R is a programming language that natively supports vectorized operations. Thus, R is ideal for all applications
+in which multi-dimensional data are relevant. Due to R's popularity in the statistical community,
+there is a plethora of libraries for visualizing, exploring, and modeling data. Overall,
+R is not as generally applicable and not as robust as other languages, which is why alternatives such as Python
+should be considered for productive systems.
+</p>
+
 <h3>What is the data science tech radar?</h3>
 
 <p>
@@ -789,7 +836,7 @@ in the radar chart indicate the evaluations of technologies. From inside to outs
 <ul>
 <li><strong>ADOPT</strong> &mdash; Technologies that are widely used and are known to excel in data science projects. If you choose these technologies,
     you are standing on solid footing. Note that it is still necessary to weigh the pros and cons of technologies depending on the specific application scenario.</li>
-<li><strong>TRIAL</strong> &mdash; Technologies that are popular in some contexts but still have to evaluated in others. Selecting a technology
+<li><strong>TRIAL</strong> &mdash; Technologies that are popular for some tasks in the context of AI. Selecting a technology
     from this technology is slightly riskier than choosing a technology from the ADOPT category.</li>
 <li><strong>ASSESS</strong> &mdash; Promising technologies that are still new and have potential for widespread use. Technologies in this category
     are riskier because the community still needs to gain more experiences in utilizing these technologies.</li> 
@@ -808,7 +855,7 @@ and can therefore be ruled out in most cases. Similarly, there are evergreen tec
 
 This visualization aims at giving you an overview of data science technologies and how they should be handled when starting out a new project.
 </p>
-hno
+
 <h3>How are the decisions made?</h3>
 
 <p>

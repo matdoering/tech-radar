@@ -23,6 +23,7 @@
 
 function radar_visualization(config) {
 
+  const radar_center_shift = {x: 0, y: 0}; // currently has to be at 0/0 for polar calculations to work, TODO
   // custom random number generator, to make random sequence reproducible
   // source: https://stackoverflow.com/questions/521295
   var seed = 42;
@@ -55,16 +56,16 @@ function radar_visualization(config) {
   ];
 
   const title_offset =
-    { x: -675, y: -420 };
+    { x: -675, y: -440 };
 
   const footer_offset =
     { x: -675, y: 420 };
 
   const legend_offset = [
-    { x: 450, y: 90 },
-    { x: -675, y: 90 },
-    { x: -675, y: -310 },
-    { x: 450, y: -310 }
+    { x: 450, y: 90 },  // LANGUAGES
+    { x: -675, y: 90 }, // INFRASTRUCTURE
+    { x: -675, y: -310 }, // FRAMEWORKS
+    { x: 450, y: -310 } // DATA MGMT
   ];
 
   function polar(cartesian) {
@@ -98,7 +99,7 @@ function radar_visualization(config) {
 
   function bounded_box(point, min, max) {
     return {
-      x: bounded_interval(point.x, min.x, max.x),
+      x: bounded_interval(point.x + radar_center_shift.x, min.x, max.x),
       y: bounded_interval(point.y, min.y, max.y)
     }
   }
@@ -182,36 +183,33 @@ function radar_visualization(config) {
     return "translate(" + x + "," + y + ")";
   }
 
-  function viewbox(quadrant) {
-    return [
-      Math.max(0, quadrants[quadrant].factor_x * 400) - 420,
-      Math.max(0, quadrants[quadrant].factor_y * 400) - 420,
-      440,
-      440
-    ].join(" ");
-  }
+  var margin = {top: 40, right: 20, bottom: 20, left: 20};
+  var width = config.width - margin.left - margin.right;
+  var height = config.height - margin.top - margin.bottom;
 
   var svg = d3.select("svg#" + config.svg_id)
+    //.append("div")
     .style("background-color", config.colors.background)
-    .attr("width", config.width)
-    .attr("height", config.height);
+    .classed("svg-container", true) 
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   var radar = svg.append("g");
-  if ("zoomed_quadrant" in config) {
-    svg.attr("viewBox", viewbox(config.zoomed_quadrant));
-  } else {
-    radar.attr("transform", translate(config.width / 2, config.height / 2));
-  }
+  radar.attr("transform", translate(config.width / 2, config.height / 2)); // THIS IS WHERE THE PLOT APPEARS
 
   var grid = radar.append("g");
 
   // draw grid lines
   grid.append("line")
+    .attr("transform", translate(radar_center_shift.x, radar_center_shift.y))
     .attr("x1", 0).attr("y1", -400)
     .attr("x2", 0).attr("y2", 400)
     .style("stroke", config.colors.grid)
     .style("stroke-width", 1);
   grid.append("line")
+    .attr("transform", translate(radar_center_shift.x, radar_center_shift.y))
     .attr("x1", -400).attr("y1", 0)
     .attr("x2", 400).attr("y2", 0)
     .style("stroke", config.colors.grid)
@@ -234,7 +232,7 @@ function radar_visualization(config) {
   // draw rings
   for (var i = 0; i < rings.length; i++) {
     grid.append("circle")
-      .attr("cx", 0)
+      .attr("cx", radar_center_shift.x)
       .attr("cy", 0)
       .attr("r", rings[i].radius)
       .style("fill", "none")
@@ -247,7 +245,7 @@ function radar_visualization(config) {
         .attr("text-anchor", "middle")
         .style("fill", "#e5e5e5")
         .style("font-family", "Arial, Helvetica")
-        .style("font-size", 42)
+        .style("font-size", '42px')
         .style("font-weight", "bold")
         .style("pointer-events", "none")
         .style("user-select", "none");
@@ -255,7 +253,7 @@ function radar_visualization(config) {
   }
 
   function legend_transform(quadrant, ring, index=null) {
-    var dx = ring < 2 ? 0 : 120;
+    var dx = ring < 2 ? 0 : 170; // LEGEND COL DIST
     var dy = (index == null ? -16 : index * 12);
     if (ring % 2 === 1) {
       dy = dy + 36 + segmented[quadrant][ring-1].length * 12;
@@ -274,7 +272,7 @@ function radar_visualization(config) {
       .attr("transform", translate(title_offset.x, title_offset.y))
       .text(config.title)
       .style("font-family", "Arial, Helvetica")
-      .style("font-size", "34");
+      .style("font-size", "48px");
 
     // footer
     radar.append("text")
@@ -282,38 +280,51 @@ function radar_visualization(config) {
       .text("▲ moved up     ▼ moved down")
       .attr("xml:space", "preserve")
       .style("font-family", "Arial, Helvetica")
-      .style("font-size", "10");
+      .style("font-size", "10px");
 
     // legend
     var legend = radar.append("g");
     for (var quadrant = 0; quadrant < 4; quadrant++) {
       legend.append("text")
         .attr("transform", translate(
-          legend_offset[quadrant].x,
+          legend_offset[quadrant].x,  // POSITION OF LEGEND
           legend_offset[quadrant].y - 45
         ))
         .text(config.quadrants[quadrant].name)
         .style("font-family", "Arial, Helvetica")
-        .style("font-size", "18");
+        .style("font-size", "32px"); // CATEGORY (e.g. programming languages)
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
           .text(config.rings[ring].name)
           .style("font-family", "Arial, Helvetica")
-          .style("font-size", "12")
+          .style("font-size", "14px") // font size of ADOPT/TRIAL/ASSESS/HOLD
           .style("font-weight", "bold");
         legend.selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
           .enter()
+            .append("a")
+            .attr("xlink:href", function(d) { 
+                if (d.active && d.hasOwnProperty("link")) {
+                    return d.link;
+                } else {
+                    return "";
+                }
+            })
             .append("text")
               .attr("transform", function(d, i) { return legend_transform(quadrant, ring, i); })
               .attr("class", "legend" + quadrant + ring)
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d, i) { return d.id + ". " + d.label; })
               .style("font-family", "Arial, Helvetica")
-              .style("font-size", "11")
+              .style("font-size", "14px") // Specific Technology (e.g. Golang)
               .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
               .on("mouseout", function(d) { hideBubble(d); unhighlightLegendItem(d); });
+
+          legend.selectAll(".legend" + quadrant + ring)
+          .data(segmented[quadrant][ring])
+          //.enter()
+                     
       }
     }
   }
@@ -342,7 +353,9 @@ function radar_visualization(config) {
     .attr("d", "M 0,0 10,0 5,8 z")
     .style("fill", "#333");
 
+
   function showBubble(d) {
+      // HIGHLIGHT LEGEND STUFF
     if (d.active || config.print_layout) {
       var tooltip = d3.select("#bubble text")
         .text(d.label);
@@ -391,9 +404,8 @@ function radar_visualization(config) {
   // configure each blip
   blips.each(function(d) {
     var blip = d3.select(this);
-
     // blip link
-    if (!config.print_layout && d.active && d.hasOwnProperty("link")) {
+    if (d.active && d.hasOwnProperty("link")) {
       blip = blip.append("a")
         .attr("xlink:href", d.link);
     }
@@ -409,9 +421,11 @@ function radar_visualization(config) {
         .style("fill", d.color);
     } else {
       blip.append("circle")
-        .attr("r", 9)
+        .attr("r", 11)
         .attr("fill", d.color);
     }
+    //blib.attr("transform", translate(10, 10))
+
 
     // blip text
     if (d.active || config.print_layout) {
@@ -422,7 +436,7 @@ function radar_visualization(config) {
         .attr("text-anchor", "middle")
         .style("fill", "#fff")
         .style("font-family", "Arial, Helvetica")
-        .style("font-size", function(d) { return blip_text.length > 2 ? "8" : "9"; })
+        .style("font-size", function(d) { return blip_text.length > 2 ? "8px" : "9px"; })
         .style("pointer-events", "none")
         .style("user-select", "none");
     }
