@@ -285,6 +285,14 @@ radar_visualization({
       {
         quadrant: 2,
         ring: 0,
+        label: "Swagger (OpenAPI)",
+        active: true,
+        link: "#swagger",
+        moved: 0
+      },
+      {
+        quadrant: 2,
+        ring: 0,
         label: "Akka (Scala)",
         active: false,
         link: "../frameworks/akka_scala.html",
@@ -605,6 +613,14 @@ radar_visualization({
       {
         quadrant: 0,
         ring: 1,
+        label: "Juliac",
+        active: true,
+        link: "#julia",
+        moved: 0
+      },
+      {
+        quadrant: 0,
+        ring: 1,
         label: "C++",
         active: true,
         link: "#cpp",
@@ -620,18 +636,10 @@ radar_visualization({
       },
       {
         quadrant: 0,
-        ring: 0,
+        ring: 1,
         label: "JavaScript",
         active: true,
-        link: "javascript.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 0,
-        label: "OpenAPI (Swagger)",
-        active: true,
-        link: "openapi_swagger.html",
+        link: "#javascript",
         moved: 0
       },
       {
@@ -644,58 +652,26 @@ radar_visualization({
       },
       {
         quadrant: 0,
-        ring: 0,
+        ring: 2,
         label: "Scala",
         active: true,
-        link: "scala.html",
-        moved: 0
-      },
-      {
-        quadrant: 0,
-        ring: 0,
-        label: "Swift",
-        active: true,
-        link: "swift.html",
+        link: "#scala",
         moved: 0
       },
       {
         quadrant: 0,
         ring: 3,
-        label: "Clojure",
-        active: true,
-        link: "clojure.html",
-        moved: -1
-      },
-      {
-        quadrant: 0,
-        ring: 1,
-        label: "GraphQL",
-        active: true,
-        link: "graphql.html",
-        moved: 1
-      },
-      {
-        quadrant: 0,
-        ring: 3,
-        label: "Haskell",
-        active: true,
-        link: "haskell.html",
-        moved: -1
-      },
-      {
-        quadrant: 0,
-        ring: 1,
         label: "Kotlin",
         active: true,
-        link: "kotlin.html",
+        link: "#kotlin",
         moved: 0
       },
       {
         quadrant: 0,
-        ring: 1,
+        ring: 2,
         label: "TypeScript",
         active: true,
-        link: "typescript.html",
+        link: "#typescript",
         moved: 0
       },
       {
@@ -708,11 +684,11 @@ radar_visualization({
       },
       {
         quadrant: 0,
-        ring: 3,
+        ring: 2,
         label: "Rust",
         active: true,
-        link: "rust.html",
-        moved: -1
+        link: "#rust",
+        moved: 0
       },
       {
         quadrant: 3,
@@ -787,6 +763,15 @@ radar_visualization({
 <tr>
 <td>
 
+<h3>Frameworks</h3>
+
+<h4 id ="swagger">Swagger (OpenAPI)</h4>
+<p>
+Swagger is a framework for web API development. It is widely known for <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>,
+frontend for accessing REST API documentation written according to the Swagger/OpenAPI specifications. Since data science applications
+are often deployed in forms of APIs, this is a must-have.
+</p>
+
 <h3>Programming Languages</h3>
 
 <h4 id="cpp">C++</h4>
@@ -817,6 +802,29 @@ that are very convenient to use. However, Java does not really support the data 
 Java likely only plays a role if models have to be integrated into an existing Java application.
 </p>
 
+<h4 id="javascript">JavaScript</h4>
+<p>
+JavaScript is currently one of the main languages that are used for web development, particularly frontend development.
+So, when you are thinking about bring your data science application to a customer, it would be worthwhile to use
+a JavaScript web application (e.g. Express + React) for this purpose. For machine learning,
+JavaScript enables one to <a href="https://towardsdatascience.com/client-side-prediction-with-tensorflow-js-e143ed53235b">run deep models on the client-side</a>
+which can be useful if you know that clients can handle the load.
+</p>
+
+<h4 id="julia">Julia</h4>
+<p>
+Julia is a language that is gaining more and more traction in the data science community. The main reason for that is that
+Julia allows for <a href="https://hackernoon.com/freeing-the-data-scientist-mind-from-the-curse-of-vectorization-julia-to-the-rescue-0c3z308v">C-like performance</a>. However, this is only possible because Julia is a compiled language. That is why Julia will probably never become the go-to language
+for data exploration. But, if you have demanding calculations, you should definitely evaluate Julia.
+</p>
+
+<h4 id="kotlin">Kotlin</h4>
+<p>
+Similarly to Java, Kotlin is based on the Java Virtual Machine. Kotlin, however, is a leaner language than Java. For example,
+it does not enforce object-oriented development. Moreover, <a href="https://kotlinlang.org/docs/reference/android-overview.html">Kotlin is compatible with Android devices</a>, which makes it
+great for the mobile market. However, all of these areas are not very relevant for data science.
+</p>
+
 <h4 id="r">R</h4>
 <p>
 R is a programming language that natively supports vectorized operations. Thus, R is ideal for all applications
@@ -826,6 +834,26 @@ R is not as generally applicable and not as robust as other languages, which is 
 should be considered for productive systems.
 </p>
 
+<h4 id="rust">Rust</h4>
+<p>
+Rust is a compiled language that's geared towards robustness. Similarly to C++ it allows low-level management of resources, which
+will take up a lot of development time. So if you want to move fast, Rust is not for you. <a href="http://www.arewelearningyet.com/">There are a few early-stage machine learning
+    libraries available for Rust</a>, so if you are looking for performance and stability, it may be worth a shot.
+</p>
+
+<h4 id="scala">Scala</h4>
+<p>
+Scala is an object-oriented language for the Java Virtual Machine. For data science applications, there seems to be some usefulness
+with respect to big data frameworks such as Hadoop or Spark. Otherwise, Scala is not suitable for data science applications.
+</p>
+
+<h4 id="typescript">TypeScript</h4>
+<p>
+Typescript is a variant of JavaScript that offers a typing system. The goal of TypeScript is to make
+JavaScript applications more stable. However, the question is whether the <a href="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b">additional burden during the implementation is worth it</a>. If you want to move fast, JavaScript is preferable.
+</p>
+
+TODO: bash, julia
 <h3>What is the data science tech radar?</h3>
 
 <p>
