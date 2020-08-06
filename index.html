@@ -45,24 +45,16 @@ radar_visualization({
       {
         quadrant: 3,
         ring: 0,
-        label: "AWS EMR",
-        active: false,
-        link: "../data_processing/aws_emr.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 0,
-        label: "Spark",
-        active: false,
-        link: "../data_processing/spark.html",
+        label: "Apache Spark",
+        active: true,
+        link: "#spark",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 1,
         label: "Airflow",
-        active: false,
+        active: true,
         link: "../data_processing/airflow.html",
         moved: 0
       },
@@ -70,95 +62,63 @@ radar_visualization({
         quadrant: 3,
         ring: 1,
         label: "AWS Data Pipeline",
-        active: false,
+        active: true,
         link: "../data_processing/aws_data_pipeline.html",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 1,
-        label: "Flink",
-        active: false,
-        link: "../data_processing/flink.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "Google BigQuery",
-        active: false,
-        link: "../data_processing/google_bigquery.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
         label: "Presto",
-        active: false,
-        link: "../data_processing/presto.html",
+        active: true,
+        link: "#presto",
         moved: 0
       },
       {
         quadrant: 3,
-        ring: 2,
-        label: "Hadoop",
-        active: false,
-        link: "../data_processing/hadoop.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 2,
-        label: "YARN",
-        active: false,
-        link: "../data_processing/yarn.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "Esper",
-        active: false,
-        link: "../data_processing/esper.html",
+        ring: 0,
+        label: "Apache Hadoop",
+        active: true,
+        link: "#hadoop",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 0,
         label: "AWS S3",
-        active: false,
-        link: "../datastores/aws_s3.html",
+        active: true,
+        link: "#s3",
+        moved: 0
+      },
+      {
+        quadrant: 3,
+        ring: 0,
+        label: "AWS EFS",
+        active: true,
+        link: "#efs",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 0,
         label: "Cassandra",
-        active: false,
-        link: "../datastores/cassandra.html",
+        active: true,
+        link: "#cassandra",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 0,
-        label: "Elasticsearch",
-        active: false,
-        link: "../datastores/elasticsearch.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 0,
-        label: "etcd",
-        active: false,
-        link: "../datastores/etcd.html",
+        label: "ELK Stack",
+        active: true,
+        link: "#elk",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 0,
         label: "PostgreSQL",
-        active: false,
+        active: true,
         link: "../datastores/postgresql.html",
         moved: 0
       },
@@ -166,103 +126,23 @@ radar_visualization({
         quadrant: 3,
         ring: 0,
         label: "Redis",
-        active: false,
-        link: "../datastores/redis.html",
+        active: true,
+        link: "#redis",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 0,
-        label: "Solr",
-        active: false,
-        link: "../datastores/solr.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "AWS DynamoDB",
-        active: false,
-        link: "../datastores/aws_dynamodb.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
-        label: "HDFS",
-        active: false,
-        link: "../datastores/hdfs.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 2,
-        label: "Consul",
-        active: false,
-        link: "../datastores/consul.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 2,
-        label: "Google Bigtable",
-        active: false,
-        link: "../datastores/google_bigtable.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 2,
-        label: "RocksDB",
-        active: false,
-        link: "../datastores/rocksdb.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "Aerospike",
-        active: false,
-        link: "../datastores/aerospike.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "CouchBase",
-        active: false,
-        link: "../datastores/couchbase.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "HBase",
-        active: false,
-        link: "../datastores/hbase.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "Memcached",
-        active: false,
-        link: "../datastores/memcached.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
         label: "MongoDB",
-        active: false,
-        link: "../datastores/mongodb.html",
+        active: true,
+        link: "#mongodb",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 3,
         label: "MySQL",
-        active: false,
+        active: true,
         link: "../datastores/mysql.html",
         moved: 0
       },
@@ -270,16 +150,8 @@ radar_visualization({
         quadrant: 3,
         ring: 3,
         label: "Oracle DB",
-        active: false,
+        active: true,
         link: "../datastores/oracle_db.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "ZooKeeper",
-        active: false,
-        link: "../datastores/zookeeper.html",
         moved: 0
       },
       {
@@ -293,16 +165,8 @@ radar_visualization({
       {
         quadrant: 2,
         ring: 0,
-        label: "Akka (Scala)",
-        active: false,
-        link: "../frameworks/akka_scala.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 0,
         label: "Node.js",
-        active: false,
+        active: true,
         link: "../frameworks/nodejs.html",
         moved: 0
       },
@@ -310,7 +174,7 @@ radar_visualization({
         quadrant: 2,
         ring: 0,
         label: "Play (Scala)",
-        active: false,
+        active: true,
         link: "../frameworks/play_scala.html",
         moved: 0
       },
@@ -318,7 +182,7 @@ radar_visualization({
         quadrant: 2,
         ring: 0,
         label: "ReactJS",
-        active: false,
+        active: true,
         link: "../frameworks/reactjs.html",
         moved: 0
       },
@@ -326,7 +190,7 @@ radar_visualization({
         quadrant: 2,
         ring: 0,
         label: "RxJava (Android)",
-        active: false,
+        active: true,
         link: "../frameworks/rxjava_android.html",
         moved: 0
       },
@@ -334,7 +198,7 @@ radar_visualization({
         quadrant: 2,
         ring: 0,
         label: "scikit-learn",
-        active: false,
+        active: true,
         link: "../frameworks/scikit_learn.html",
         moved: 0
       },
@@ -342,7 +206,7 @@ radar_visualization({
         quadrant: 2,
         ring: 0,
         label: "Spring",
-        active: false,
+        active: true,
         link: "../frameworks/spring.html",
         moved: 0
       },
@@ -350,7 +214,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "Akka-Http",
-        active: false,
+        active: true,
         link: "../frameworks/akka_http.html",
         moved: 0
       },
@@ -358,7 +222,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "Angular",
-        active: false,
+        active: true,
         link: "../frameworks/angular.html",
         moved: 0
       },
@@ -366,7 +230,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "AspectJ",
-        active: false,
+        active: true,
         link: "../frameworks/aspectj.html",
         moved: 0
       },
@@ -374,7 +238,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "Camel",
-        active: false,
+        active: true,
         link: "../frameworks/camel.html",
         moved: 0
       },
@@ -382,7 +246,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "Camunda",
-        active: false,
+        active: true,
         link: "../frameworks/camunda.html",
         moved: 0
       },
@@ -390,7 +254,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "OpenNLP",
-        active: false,
+        active: true,
         link: "../frameworks/opennlp.html",
         moved: 0
       },
@@ -398,7 +262,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "TensorFlow",
-        active: false,
+        active: true,
         link: "../frameworks/tensorflow.html",
         moved: 0
       },
@@ -406,7 +270,7 @@ radar_visualization({
         quadrant: 2,
         ring: 1,
         label: "Thymeleaf",
-        active: false,
+        active: true,
         link: "../frameworks/thymeleaf.html",
         moved: 0
       },
@@ -414,7 +278,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "Aurelia",
-        active: false,
+        active: true,
         link: "../frameworks/aurelia.html",
         moved: 0
       },
@@ -422,7 +286,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "Ember.js",
-        active: false,
+        active: true,
         link: "../frameworks/emberjs.html",
         moved: 0
       },
@@ -430,7 +294,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "gRPC",
-        active: false,
+        active: true,
         link: "../frameworks/grpc.html",
         moved: 0
       },
@@ -438,7 +302,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "Http4s",
-        active: false,
+        active: true,
         link: "../frameworks/http4s.html",
         moved: 0
       },
@@ -446,7 +310,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "jOOQ",
-        active: false,
+        active: true,
         link: "../frameworks/jooq.html",
         moved: 0
       },
@@ -454,7 +318,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "Redux",
-        active: false,
+        active: true,
         link: "../frameworks/redux.html",
         moved: 0
       },
@@ -462,7 +326,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "Vert.x",
-        active: false,
+        active: true,
         link: "../frameworks/vertx.html",
         moved: 0
       },
@@ -470,7 +334,7 @@ radar_visualization({
         quadrant: 2,
         ring: 2,
         label: "Vue.js",
-        active: false,
+        active: true,
         link: "../frameworks/vuejs.html",
         moved: 0
       },
@@ -478,7 +342,7 @@ radar_visualization({
         quadrant: 2,
         ring: 3,
         label: "Activiti",
-        active: false,
+        active: true,
         link: "../frameworks/activiti.html",
         moved: 0
       },
@@ -486,7 +350,7 @@ radar_visualization({
         quadrant: 2,
         ring: 3,
         label: "AngularJS 1.x",
-        active: false,
+        active: true,
         link: "../frameworks/angularjs_1x.html",
         moved: 0
       },
@@ -494,7 +358,7 @@ radar_visualization({
         quadrant: 2,
         ring: 3,
         label: "BackboneJS",
-        active: false,
+        active: true,
         link: "../frameworks/backbonejs.html",
         moved: 0
       },
@@ -502,7 +366,7 @@ radar_visualization({
         quadrant: 2,
         ring: 3,
         label: "Drools",
-        active: false,
+        active: true,
         link: "../frameworks/drools.html",
         moved: 0
       },
@@ -510,7 +374,7 @@ radar_visualization({
         quadrant: 2,
         ring: 3,
         label: "Spray",
-        active: false,
+        active: true,
         link: "../frameworks/spray.html",
         moved: 0
       },
@@ -518,7 +382,7 @@ radar_visualization({
         quadrant: 1,
         ring: 0,
         label: "Docker",
-        active: false,
+        active: true,
         link: "../infrastructure/docker.html",
         moved: 0
       },
@@ -526,7 +390,7 @@ radar_visualization({
         quadrant: 1,
         ring: 0,
         label: "Hystrix",
-        active: false,
+        active: true,
         link: "../infrastructure/hystrix.html",
         moved: 0
       },
@@ -534,7 +398,7 @@ radar_visualization({
         quadrant: 1,
         ring: 0,
         label: "Kubernetes",
-        active: false,
+        active: true,
         link: "../infrastructure/kubernetes.html",
         moved: 0
       },
@@ -542,7 +406,7 @@ radar_visualization({
         quadrant: 1,
         ring: 0,
         label: "Nginx",
-        active: false,
+        active: true,
         link: "../infrastructure/nginx.html",
         moved: 0
       },
@@ -550,7 +414,7 @@ radar_visualization({
         quadrant: 1,
         ring: 0,
         label: "OpenTracing",
-        active: false,
+        active: true,
         link: "../infrastructure/opentracing.html",
         moved: 1
       },
@@ -558,7 +422,7 @@ radar_visualization({
         quadrant: 1,
         ring: 0,
         label: "Tomcat",
-        active: false,
+        active: true,
         link: "../infrastructure/tomcat.html",
         moved: 0
       },
@@ -566,7 +430,7 @@ radar_visualization({
         quadrant: 1,
         ring: 0,
         label: "ZMON",
-        active: false,
+        active: true,
         link: "../infrastructure/zmon.html",
         moved: 0
       },
@@ -574,7 +438,7 @@ radar_visualization({
         quadrant: 1,
         ring: 1,
         label: "Failsafe",
-        active: false,
+        active: true,
         link: "../infrastructure/failsafe.html",
         moved: 0
       },
@@ -582,7 +446,7 @@ radar_visualization({
         quadrant: 1,
         ring: 1,
         label: "Undertow",
-        active: false,
+        active: true,
         link: "../infrastructure/undertow.html",
         moved: 0
       },
@@ -590,7 +454,7 @@ radar_visualization({
         quadrant: 1,
         ring: 2,
         label: "AWS Lambda",
-        active: false,
+        active: true,
         link: "../infrastructure/aws_lambda.html",
         moved: 0
       },
@@ -598,7 +462,7 @@ radar_visualization({
         quadrant: 1,
         ring: 3,
         label: "STUPS",
-        active: false,
+        active: true,
         link: "../infrastructure/stups.html",
         moved: -1
       },
@@ -655,7 +519,7 @@ radar_visualization({
         ring: 0,
         label: "Python",
         active: true,
-        link: "python.html",
+        link: "#python",
         moved: 0
       },
       {
@@ -726,64 +590,24 @@ radar_visualization({
         quadrant: 3,
         ring: 0,
         label: "AWS SNS",
-        active: false,
+        active: true,
         link: "../queues/aws_sns.html",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 0,
-        label: "AWS SQS",
-        active: false,
-        link: "../queues/aws_sqs.html",
+        label: "Apache Kafka",
+        active: true,
+        link: "#kafka",
         moved: 0
       },
       {
         quadrant: 3,
         ring: 0,
-        label: "Kafka",
-        active: false,
-        link: "../queues/kafka.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 0,
-        label: "Nakadi",
-        active: false,
-        link: "../queues/nakadi.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 1,
         label: "RabbitMQ",
-        active: false,
-        link: "../queues/rabbitmq.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 2,
-        label: "AWS Kinesis",
-        active: false,
-        link: "../queues/aws_kinesis.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "ActiveMQ",
-        active: false,
-        link: "../queues/activemq.html",
-        moved: 0
-      },
-      {
-        quadrant: 3,
-        ring: 3,
-        label: "HornetQ",
-        active: false,
-        link: "../queues/hornetq.html",
+        active: true,
+        link: "#rabbitmq",
         moved: 0
       },
   ]
@@ -884,6 +708,12 @@ Once the star of web development, <a href="https://jaxenter.com/php-tiobe-sept-2
 This is mainly due to the wide adoption of JavaScript over PHP.
 </p>
 
+<h4 id="python">Python</h4>
+<p>
+Python is the most widely used scripting language out there. There is a very good support in terms of external libaries.
+For example, the tensorflow, scikit-learn, numpy, and pandas packages are particularly suitable for data science.
+</p>
+
 <h4 id="r">R</h4>
 <p>
 R is a programming language that natively supports vectorized operations. Thus, R is ideal for all applications
@@ -912,7 +742,82 @@ Typescript is a variant of JavaScript that offers a typing system. The goal of T
 JavaScript applications more stable. However, the question is whether the <a href="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b">additional burden during the implementation is worth it</a>. If you want to move fast, JavaScript is preferable.
 </p>
 
-<h3>What is the data science tech radar?</h3>
+<h3>Data Management</h3>
+
+<h4 id="hadoop">Apache Hadoop</h4>
+<p>
+Hadoop is a framework for managing big data. It is based on a <a href="https://en.wikipedia.org/wiki/MapReduce">map-reduce strategy</a>.
+HDFS (Hadoop File System) can be combined with Hadoop in order to improve data availability. Hadoop can be
+<a href="https://data-flair.training/blogs/kafka-hadoop-integration/">combined with Kafka</a>. A cloud-native alternative to the Apache
+suite of big-data tools is <a href="https://aws.amazon.com/de/emr/">AWS EMR</a>.
+</p>
+
+<h4 id="kafka">Apache Kafka</h4>
+<p>
+Kafka is a big-data storage solution that combines solutions for messaging and streaming. Kafka can be
+<a href="https://data-flair.training/blogs/kafka-hadoop-integration/">combined with Hadoop</a>.
+</p>
+
+<h4 id="spark">Apache Spark</h4>
+<p>
+<a href="https://spark.apache.org/">Apache Spark</a> is an engine for processing stream data. It is frequently used for processing data before it is used
+in machine learning/data science applications. Spark can be used together with <a href="https://www.baeldung.com/kafka-spark-data-pipeline">Kafka</a>.
+</p>
+
+<h4 id="s3">AWS S3</h4>
+<p>
+<a href="https://aws.amazon.com/s3/">S3</a> (Simple Storage Service) is a durable, highly-available cloud object storage solution available through AWS.
+It is ideal for applications such as logging. To reduce costs, data that are not
+frequently accessed can be automatically transferred to cheaper storage options such as AWS Glacier.
+</p>
+
+<h4 id="efs">AWS EFS</h4>
+<p>
+AWS EFS (Elastic File System) is a file system that elastically <a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html"</a>scales both performance and available space</a> according to user demands.
+EFS is a great tool when multiple applications need to quickly access file-system data from a central location.
+</p>
+
+<h4 id="cassandra">Cassandra</h4>
+<p>
+Cassandra is a NoSQL database. It is the most popular wide-column (i.e. 2D key-value) storage solution.
+</p>
+
+<h4 id="elk">The ELK Stack</h4>
+<p>
+The <a href="https://www.elastic.co/de/what-is/elk-stack">ELK stack</a> consists of Elasticsearch, Logstash, and Kibana.
+Elasticsearch indexes a collection of documents and allows users to search within the document collection. Logstash
+is an application that ingests log files, structures them, and stores them to disk. Logstash can be combined with
+Elasticsearch. Kibana allows for visualizing data based on Elasticsearch.
+</p>
+
+<h4 id="mongodb">MongoDB</h4>
+<p>
+MongoDB a NoSQL database. It is the most widely used document store. If you are looking for a cloud-native approach,
+consider <a href="https://aws.amazon.com/dynamodb/">AWS DynamoDB</a>.
+</p>
+
+<h4 id="presto">Presto</h4>
+<p>
+<a href="https://en.wikipedia.org/wiki/Presto_(SQL_query_engine)">Presto</a> is a SQL engine for big data applications.
+Using Presto, data can be retrieved from various sources such as Hadoop, AWS S3, MySQL, MongoDB, and Kafka.
+</p>
+
+<h4 id="rabbitmq">RabbitMQ</h4>
+<p>
+RabbitMQ is a message broker that is frequently used in terms of a middleware connecting independent applications.
+RabbitMQ is <a href="https://www.cloudamqp.com/blog/2020-04-03-why-use-rabbitmq-in-a-microservice-architecture.html">particularly useful for microservice architectures</a>. A cloud-native altnerative to RabbitMQ is <a href="https://aws.amazon.com/sqs/">AWS SQS</a>.
+</p>
+
+<h4 id="redis">Redis</h4>
+<p>
+Redis is the dominant database when it comes to in-memory caching. It can also be used as a message broker. An alternative to Redis is Memcached.
+Redis should be considered for any application that needs to store large numbers of objects in memory, e.g., for storing session data
+or for implementing a queue.
+</p>
+
+
+
+<h3>What is the data science and AI tech radar?</h3>
 
 <p>
 The tech radar visualizes an evaluation of available data science technologies. The individual rings
@@ -970,5 +875,6 @@ This tech radar is based on the <a href="https://github.com/zalando/tech-radar">
   ga('send', 'pageview');
 </script>
 
+<!-- TODO: RDBMS: MySQL, Postgres, Oracle -->
 </body>
 </html>
