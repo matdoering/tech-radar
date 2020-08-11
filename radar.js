@@ -1,6 +1,7 @@
 // The MIT License (MIT)
 
 // Copyright (c) 2017 Zalando SE
+// Copyright (c) 2020 datascienceblog.net
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -290,6 +291,11 @@ function radar_visualization(config) {
           legend_offset[quadrant].x,  // POSITION OF LEGEND
           legend_offset[quadrant].y - 45
         ))
+        .append("a")
+        .attr("xlink:href", function() {
+            var name = config.quadrants[quadrant].name.toLowerCase()
+            return "#" + name.replace(" ", "_")
+        })
         .text(config.quadrants[quadrant].name)
         .style("font-family", "Arial, Helvetica")
         .style("font-size", "32px"); // CATEGORY (e.g. programming languages)
