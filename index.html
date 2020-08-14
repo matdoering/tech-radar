@@ -26,7 +26,7 @@ radar_visualization({
     grid: "#bbb",
     inactive: "#ddd"
   },
-  title: "Data Science and AI Tech Radar — 2020/07",
+  title: "Data Science and AI Tech Radar — 2020/08",
   quadrants: [
     { name: "Languages" },
     { name: "Infrastructure" },
@@ -101,7 +101,7 @@ radar_visualization({
       {
         quadrant: 3,
         ring: 0,
-        label: "Cassandra",
+        label: "Apache Cassandra",
         active: true,
         link: "#cassandra",
         moved: 0
@@ -143,23 +143,15 @@ radar_visualization({
         ring: 0,
         label: "Node.js",
         active: true,
-        link: "../frameworks/nodejs.html",
+        link: "#nodejs",
         moved: 0
       },
       {
         quadrant: 2,
         ring: 0,
-        label: "Play (Scala)",
+        label: "Flask",
         active: true,
-        link: "../frameworks/play_scala.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 0,
-        label: "ReactJS",
-        active: true,
-        link: "../frameworks/reactjs.html",
+        link: "#flask",
         moved: 0
       },
       {
@@ -167,55 +159,31 @@ radar_visualization({
         ring: 0,
         label: "scikit-learn",
         active: true,
-        link: "../frameworks/scikit_learn.html",
+        link: "#sklearn",
         moved: 0
       },
       {
         quadrant: 2,
-        ring: 1,
-        label: "Angular",
-        active: true,
-        link: "../frameworks/angular.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 1,
-        label: "OpenNLP",
-        active: true,
-        link: "../frameworks/opennlp.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 1,
+        ring: 0,
         label: "TensorFlow",
         active: true,
-        link: "../frameworks/tensorflow.html",
+        link: "#tensorflow",
         moved: 0
       },
       {
         quadrant: 2,
-        ring: 2,
+        ring: 0,
+        label: "Protobuf",
+        active: true,
+        link: "#protobuf",
+        moved: 0
+      },
+      {
+        quadrant: 2,
+        ring: 1,
         label: "gRPC",
         active: true,
-        link: "../frameworks/grpc.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 2,
-        label: "Vue.js",
-        active: true,
-        link: "../frameworks/vuejs.html",
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 3,
-        label: "AngularJS 1.x",
-        active: true,
-        link: "../frameworks/angularjs_1x.html",
+        link: "#grpc",
         moved: 0
       },
       {
@@ -223,7 +191,7 @@ radar_visualization({
         ring: 0,
         label: "Docker",
         active: true,
-        link: "../infrastructure/docker.html",
+        link: "#docker",
         moved: 0
       },
       {
@@ -231,7 +199,7 @@ radar_visualization({
         ring: 0,
         label: "Kubernetes",
         active: true,
-        link: "../infrastructure/kubernetes.html",
+        link: "#kubernetes",
         moved: 0
       },
       {
@@ -239,15 +207,47 @@ radar_visualization({
         ring: 0,
         label: "Nginx",
         active: true,
-        link: "../infrastructure/nginx.html",
+        link: "#nginx",
+        moved: 0
+      },
+      {
+        quadrant: 1,
+        ring: 3,
+        label: "Apache",
+        active: true,
+        link: "#apache",
+        moved: 0
+      },
+      {
+        quadrant: 1,
+        ring: 1,
+        label: "AWS Lambda",
+        active: true,
+        link: "#lambda",
+        moved: 0
+      },
+      {
+        quadrant: 1,
+        ring: 0,
+        label: "Ansible",
+        active: true,
+        link: "#ansible",
         moved: 0
       },
       {
         quadrant: 1,
         ring: 2,
-        label: "AWS Lambda",
+        label: "Puppet",
         active: true,
-        link: "../infrastructure/aws_lambda.html",
+        link: "#puppet",
+        moved: 0
+      },
+      {
+        quadrant: 1,
+        ring: 2,
+        label: "Chef",
+        active: true,
+        link: "#chef",
         moved: 0
       },
       {
@@ -391,134 +391,160 @@ radar_visualization({
 });
 </script>
 
+<div class="section">
+<h3>What is the data science and AI tech radar?</h3>
+
+<p>
+The tech radar visualizes an evaluation of available data science technologies. The individual rings
+in the radar chart indicate the evaluations of technologies. From inside to outside these categories are:
+</p>
+
+<ul>
+<li><strong>ADOPT</strong> &mdash; Technologies that are widely used and are known to excel in data science projects. If you choose these technologies,
+    you are standing on solid footing. Note that it is still necessary to weigh the pros and cons of technologies depending on the specific application scenario.</li>
+<li><strong>TRIAL</strong> &mdash; Technologies that are popular for some tasks in the context of AI. Selecting a technology
+    from this technology is slightly riskier than choosing a technology from the ADOPT category.</li>
+<li><strong>ASSESS</strong> &mdash; Promising technologies that are still new and have potential for widespread use. Technologies in this category
+    are riskier because the community still needs to gain more experiences in utilizing these technologies.</li> 
+<li><strong>HOLD</strong> &mdash; Technologies that should be avoided in new projects. A technology may be on HOLD because it has become outdated
+    or because the technology is not yet sufficiently mature.</li>
+</ul>
+
+
+<h3>What is the purpose?</h3>
+
+<p>
+Choosing technologies is hard. Technology choices have to be based on the specific requirements of individual projects.
+Still, it is possible to provide some general guidance. For example, some technologies are not very suitable for data science
+and can therefore be ruled out in most cases. Similarly, there are evergreen technologies whose application is nearly risk-free.
+
+This visualization aims at giving you an overview of data science technologies and how they should be handled when starting out a new project.
+</p>
+
+<h3>How are the decisions made?</h3>
+
+<p>
+This data science tech radar is maintained by <a href="https://datascienceblog.net">Matthias Döring</a>.
+The decisions are made based on his personal and professional experiences with the technologies.
+In order to integrate the knowledge and experience from the data science community,
+please get in touch if you feel that any technology is missing/misplaced. If you make a contribution,
+you will of course receive an honorable mention in the acknowledgments section.
+</p>
+
+<h3>Acknowledgments</h3>
+<p>
+This tech radar is based on the <a href="https://github.com/zalando/tech-radar">Zalando Tech Radar</a>, which in turn is based on the
+<a href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>.
+</p>
+</div>
+
 <table>
 <tr>
 <td>
 
+
 <h3 id="frameworks">Frameworks</h3>
 
-<h4 id ="swagger">Swagger (OpenAPI)</h4>
+<h4 id="flask">Flask</h4>
 <p>
-Swagger is a framework for web API development. It is widely known for <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>,
+<a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> is a minimalist framework for developing web applications with Python.
+It is particularly suitable for the <a href="https://www.datascienceblog.net/post/programming/flask-api-development/">development of APIs</a>.
+</p>
+
+<h4 id="grpc">gRPC</h4>
+<p>
+<a href="https://grpc.io/">gRPC</a> is a remote procedure call protocol that utilizes Google's <a href="https://developers.google.com/protocol-buffers">Protobuf format</a> for data serialization. If you are interested in using Protobuf,
+consider <a href="https://www.datascienceblog.net/post/programming/essential-protobuf-guide-python/">this guide</a>.
+</p>
+
+<h4 id="nodejs">Node.js</h4>
+<p>
+<a href="https://nodejs.org/en/">Node.js</a> is a JavaScript, open-source environment for servers. It is typically combined
+with frontend libraries such as <a href="https://angularjs.org/">AngularJS</a>, <a href="https://reactjs.org/">React</a>, or <a href="https://vuejs.org/">Vue.js</a>.
+Due to the existence of these well-developed libraries, Node.js is the preferred platform for applications
+with complex user interfaces.
+</p>
+<h4 id="protobuf">Protobuf</h4>
+<p>
+<a href="https://developers.google.com/protocol-buffers">Protobuf</a> is a mechanism for data serialization that is developed by Google. Due to its binary format and the explicit definition of data structures,
+it is advantageous over JSON. Protobuf can be used together with the gRPC protocol.
+</p>
+
+<h4 id="sklearn">scikit-learn</h4>
+<p>
+<a href="https://scikit-learn.org/">scikit-learn</a> is a Python machine-learning library that offers a multitude
+of models ranging from decision trees over support vector machines to k-means clustering. Note that, for deep learning,
+TensorFlow should be used.
+</p>
+
+<h4 id="swagger">Swagger (OpenAPI)</h4>
+<p>
+<a href="https://swagger.io/">Swagger</a> is a framework for web API development. It is widely known for <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>,
 frontend for accessing REST API documentation written according to the Swagger/OpenAPI specifications. Since data science applications
 are often deployed in forms of APIs, this is a must-have.
 </p>
 
+<h4 id="tensorflow">TensorFlow</h4>
+<p>
+<a href="https://www.tensorflow.org/">Google's TensorFlow</a> is the dominant framework for deep learning.
+TensorFlow models can be served in production environments using
+<a href="https://www.tensorflow.org/tfx/guide/serving">TensorFlow Serving</a>.
+</p>
+
 <h3 id="infrastructure">Infrastructure</h3>
-TODO
 
-<h3 id="languages">Languages</h3>
-
-<h4 id="bash">Bash</h4>
+<h4 id="ansible">Ansible</h4>
 <p>
-Bash is a shell language that excels at working with files and programs at the unix system level. Many data applications
-require the successful executiong of several programs or data wrangling, for which Bash is ideal. Ideally, Bash scripts should be
-relatively small. For complex file system task, other solutions should be considered.
+<a href="https://www.ansible.com/">Ansible</a> is a lightweight, open-source tool for the management of compute infrastructure. If you have several servers for which
+you want to perform configuration tasks such as user management, software installations, and updates,
+you should consider Ansible.
 </p>
 
-<h4 id="c">C</h4>
+<h4 id="apache">Apache</h4>
 <p>
-C is a low-level language that is particularly suited for all applications that work closely with the hardware of a system,
-for example oeprating systems such as Linux or embedded systems. However, it is not a language that is very useful for data science.
+<a href="https://httpd.apache.org/">The Apache web server</a> (httpd) has been the dominant web server for many years. Nowadays, however,
+<a href="https://kinsta.com/blog/nginx-vs-apache">Nginx should be the preferred over Apache</a>.
 </p>
 
-<h4 id="cpp">C++</h4>
+<h4 id="lambda">AWS Lambda</h4>
 <p>
-Similarly to Java, C++ is a well-established high-level programming language. However, in contrast to Java,
-C++ is geared towards fine-grained control over sytem resources. For example, C++ does not have an automatic
-garbage collection but requires developers to think about how they manage memory. While C++ allows for very efficient and stable
-software, development is typically considerably slower than in other languages due to a lack of supporting libraries,
-long compile times, and the intricacies of the language. HoweverA, if performance is a prime goal of the software,
-C++ is probably the way to go. It is no coincidence that the core of <a href="https://github.com/tensorflow/tensorflow>">Tensorflow</a>
-is written in C++. While C++ is not suitable for data science tasks, it excels when engineering large-scale AI systems
-for which performance is key.
+<a href="https://aws.amazon.com/lambda/">AWS Lambda</a> is a serverless platform for event-driven
+data processing tasks. Using AWS Lambda, you can define a lambda function that shall be executed,
+once a given event takes place. AWS Lambda is ideally suited for short, event-driven workloads
+that do not require a compute instance that runs 24/7.
 </p>
 
-<h4 id="golang">Go</h4>
+<h4 id="chef">Chef</h4>
 <p>
-<a href="https://golang.org/">Go</a> is a minimalist, compiled language that was developed by Google: <a href="https://yourbasic.org/golang/advantages-over-java-python/">it is performant, type-safe, and transparent</a>. However, there is currently <a href="https://101.datascience.community/2019/04/26/golang-for-data-science/">little support for data exploration</a>,
-which means that Go is not suitable for typical data science tasks. However, <a href="https://medium.com/@calebkaiser/why-were-writing-machine-learning-infrastructure-in-go-not-python-38d6a37e2d76">Go is well-suited for infrastructure management tasks</a>, for example for model deployment.
-So, while Go will probably never become a typical language data scientists will use, it should be considered for AI engineering tasks.
+<a href="https://www.chef.io/">Chef</a> is a tool for the automated management of IT infrastructure.
+Similarly to Puppet, Chef is more complex than Ansible.
 </p>
 
-<h4 id="java">Java</h4>
+<h4 id="docker">Docker</h4>
 <p>
-Java has been the most widely used high-level programming language for a long time now. Due to its virtual machine,
-Java applications are independent of the system architecture, rendering Java code highly portable. Java has an active
-community and has great ecosystems for overall software engineering, for example, due to highly developed IDEs
-that are very convenient to use. However, Java does not really support the data science process. Thus,
-Java likely only plays a role if models have to be integrated into an existing Java application.
+Within a very short time span, <a href="https://www.docker.com/">Docker</a> has become an essential tool for software development and deployment.
+Docker is a containerization technology that encapsulates low-level system libraries and dependencies of a package
+in terms of images, which can be <a href="https://hub.docker.com/">hosted online</a>. These images can then be run on any system in terms of containers, without having to worry about
+dependency management.
 </p>
 
-<h4 id="javascript">JavaScript</h4>
+<h4 id="kubernetes">Kubernetes</h4>
 <p>
-JavaScript is currently one of the main languages that are used for web development, particularly frontend development.
-So, when you are thinking about bring your data science application to a customer, it would be worthwhile to use
-a JavaScript web application (e.g. Express + React) for this purpose. For machine learning,
-JavaScript enables one to <a href="https://towardsdatascience.com/client-side-prediction-with-tensorflow-js-e143ed53235b">run deep models on the client-side</a>
-which can be useful if you know that clients can handle the load.
+<a href="https://kubernetes.io/">Kubernetes</a> (K8s) is a container orchestration platform that is based on Docker. K8s is particularly suitable
+when multiple containers that interact with each other have to be managed.
+
+<a href="https://www.openshift.com/">RedHat's OpenShift</a> is an extension of K8s that is geared towards enterprise applications.
 </p>
 
-<h4 id="julia">Julia</h4>
+<h4 id="nginx">Nginx</h4>
 <p>
-Julia is a language that is gaining more and more traction in the data science community. The main reason for this its usability and its
-<a href="https://hackernoon.com/freeing-the-data-scientist-mind-from-the-curse-of-vectorization-julia-to-the-rescue-0c3z308v">C-like performance</a>. However, this is only possible because Julia is a compiled language. Despite its support in Jupyter notebooks, Julia will probably never become the go-to language
-for data exploration due to the lag that caused by the compilations. But, if you have demanding calculations, you should definitely evaluate Julia.
+Nginx is a <a href="https://www.nginx.com/">powerful reverse proxy</a>. Because it <a href="https://kinsta.com/blog/nginx-vs-apache">offers some advantages</a> over the Apache web server, Nginx should be the preferred choice.
 </p>
 
-<h4 id="kotlin">Kotlin</h4>
+<h4 id="puppet">Puppet</h4>
 <p>
-Similarly to Java, Kotlin is based on the Java Virtual Machine. Kotlin, however, is a leaner language than Java. For example,
-it does not enforce object-oriented development. Moreover, <a href="https://kotlinlang.org/docs/reference/android-overview.html">Kotlin is compatible with Android devices</a>, which makes it
-great for the mobile market. However, all of these areas are not very relevant for data science.
-</p>
-
-<h4 id="matlab">Matlab</h4>
-<p>
-<a href="https://www.mathworks.com/products/matlab.html">Matlab</a> is a commercial language that is geared towards
-<a href="https://tobydriscoll.net/blog/matlab-vs.-julia-vs.-python/">mathematical calculations</a>,
-which is why it has collected some users in the data science sphere. However, with Julia there is a strong, freely available
-competitor on the market.
-</p>
-
-<h4 id="php">PHP</h4>
-<p>
-Once the star of web development, <a href="https://jaxenter.com/php-tiobe-sept-2019-162096.html">PHP has fallen from grace in recent years</a>.
-This is mainly due to the wide adoption of JavaScript over PHP.
-</p>
-
-<h4 id="python">Python</h4>
-<p>
-Python is the most widely used scripting language out there. There is a very good support in terms of external libaries.
-For example, the tensorflow, scikit-learn, numpy, and pandas packages are particularly suitable for data science.
-</p>
-
-<h4 id="r">R</h4>
-<p>
-R is a programming language that natively supports vectorized operations. Thus, R is ideal for all applications
-in which multi-dimensional data are relevant. Due to R's popularity in the statistical community,
-there is a plethora of libraries for visualizing, exploring, and modeling data. Overall,
-R is not as generally applicable and not as robust as other languages, which is why alternatives such as Python
-should be considered for productive systems.
-</p>
-
-<h4 id="rust">Rust</h4>
-<p>
-Rust is a compiled language that's geared towards robustness. Similarly to C++ it allows low-level management of resources, which
-will take up a lot of development time. So if you want to move fast, Rust is not for you. <a href="http://www.arewelearningyet.com/">There are a few early-stage machine learning
-    libraries available for Rust</a>, so if you are looking for performance and stability, it may be worth a shot.
-</p>
-
-<h4 id="scala">Scala</h4>
-<p>
-Scala is an object-oriented language for the Java Virtual Machine. For data science applications, there seems to be some usefulness
-with respect to big data frameworks such as Hadoop or Spark. Otherwise, Scala is not suitable for data science applications.
-</p>
-
-<h4 id="typescript">TypeScript</h4>
-<p>
-Typescript is a variant of JavaScript that offers a typing system. The goal of TypeScript is to make
-JavaScript applications more stable. However, the question is whether the <a href="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b">additional burden during the implementation is worth it</a>. If you want to move fast, JavaScript is preferable.
+<a href="https://puppet.com/">Puppet</a> is a tool for infrastructure management and delivery.
+Similarly to Chef, Puppet is more complex than Ansible.
 </p>
 
 <h3 id="data_management">Data Management</h3>
@@ -530,9 +556,14 @@ According to <a href="https://airflow.apache.org/">Apache</a>, <i>Airflow is a p
 For a cloud-native solution, consider <a href="https://aws.amazon.com/datapipeline/">AWS Data Pipeline</a>, a managed ETL (extract, transform, load) service.
 </p>
 
+<h4 id="cassandra">Apache Cassandra</h4>
+<p>
+<a href="https://cassandra.apache.org/">Cassandra</a> is a NoSQL database. It is the most popular wide-column (i.e. 2D key-value) storage solution.
+</p>
+
 <h4 id="hadoop">Apache Hadoop</h4>
 <p>
-Hadoop is a framework for managing big data. It is based on a <a href="https://en.wikipedia.org/wiki/MapReduce">map-reduce strategy</a>.
+<a href="https://hadoop.apache.org/">Hadoop</a> is a framework for managing big data. It is based on a <a href="https://en.wikipedia.org/wiki/MapReduce">map-reduce strategy</a>.
 HDFS (Hadoop File System) can be combined with Hadoop in order to improve data availability. Hadoop can be
 <a href="https://data-flair.training/blogs/kafka-hadoop-integration/">combined with Kafka</a>. A cloud-native alternative to the Apache
 suite of big-data tools is <a href="https://aws.amazon.com/de/emr/">AWS EMR</a>.
@@ -540,7 +571,7 @@ suite of big-data tools is <a href="https://aws.amazon.com/de/emr/">AWS EMR</a>.
 
 <h4 id="kafka">Apache Kafka</h4>
 <p>
-Kafka is a big-data storage solution that combines solutions for messaging and streaming. Kafka can be
+<a href="https://kafka.apache.org/">Kafka</a> is a big-data storage solution that combines solutions for messaging and streaming. Kafka can be
 <a href="https://data-flair.training/blogs/kafka-hadoop-integration/">combined with Hadoop</a>.
 </p>
 
@@ -563,10 +594,6 @@ AWS EFS (Elastic File System) is a file system that elastically <a href="https:/
 EFS is a great tool when multiple applications need to quickly access file-system data from a central location.
 </p>
 
-<h4 id="cassandra">Cassandra</h4>
-<p>
-Cassandra is a NoSQL database. It is the most popular wide-column (i.e. 2D key-value) storage solution.
-</p>
 
 <h4 id="elk">The ELK Stack</h4>
 <p>
@@ -578,82 +605,151 @@ Elasticsearch. Kibana allows for visualizing data based on Elasticsearch.
 
 <h4 id="mongodb">MongoDB</h4>
 <p>
-MongoDB a NoSQL database. It is the most widely used document store. If you are looking for a cloud-native approach,
+<a href="https://www.mongodb.com/">MongoDB</a> is the most widely used NoSQL document store. If you are looking for a cloud-native approach,
 consider <a href="https://aws.amazon.com/dynamodb/">AWS DynamoDB</a>.
 </p>
 
 <h4 id="mysql">MySQL</h4>
 <p>
-MySQL is probably still the most widely known RDBMS (relational database management system). Since the future of
+<a href="https://www.mysql.com/">MySQL</a> is probably still the most widely known RDBMS (relational database management system). Since the future of
 MySQL is uncertain, the GPL-licensed <a href="https://mariadb.org/">MariaDB</a> should be used instead.
 </p>
 
 <h4 id="presto">Presto</h4>
 <p>
-<a href="https://en.wikipedia.org/wiki/Presto_(SQL_query_engine)">Presto</a> is a SQL engine for big data applications.
+<a href="https://prestodb.io/">Presto</a> is a SQL engine for big data applications.
 Using Presto, data can be retrieved from various sources such as Hadoop, AWS S3, MySQL, MongoDB, and Kafka.
 </p>
 
 <h4 id="rabbitmq">RabbitMQ</h4>
 <p>
-RabbitMQ is a message broker that is frequently used in terms of a middleware connecting independent applications.
-RabbitMQ is <a href="https://www.cloudamqp.com/blog/2020-04-03-why-use-rabbitmq-in-a-microservice-architecture.html">particularly useful for microservice architectures</a>. A cloud-native alternative to RabbitMQ is <a href="https://aws.amazon.com/sqs/">AWS SQS</a>, a queueing solution that can be combined
+<a href="https://www.rabbitmq.com/">RabbitMQ</a> is a message broker that is frequently used in terms of a middleware connecting independent applications.
+RabbitMQ is <a href="https://www.cloudamqp.com/blog/2020-04-03-why-use-rabbitmq-in-a-microservice-architecture.html">particularly useful for microservice architectures</a>. A cloud-native alternative to RabbitMQ is <a href="https://aws.amazon.com/sqs/">AWS SQS</a>, a queuing solution that can be combined
 with <a href="https://aws.amazon.com/sns/">AWS SNS</a>.
 </p>
 
 <h4 id="redis">Redis</h4>
 <p>
-Redis is the dominant database when it comes to in-memory caching. It can also be used as a message broker. An alternative to Redis is Memcached.
+<a href="https://redis.io/">Redis</a> is the dominant database when it comes to in-memory caching. It can also be used as a message broker. An alternative to Redis is Memcached.
 Redis should be considered for any application that needs to store large numbers of objects in memory, e.g., for storing session data
 or for implementing a queue.
 </p>
 
-
-
-<h3>What is the data science and AI tech radar?</h3>
-
-<p>
-The tech radar visualizes an evaluation of available data science technologies. The individual rings
-in the radar chart indicate the evaluations of technologies. From inside to outside these categories are:
-</p>
-
-<ul>
-<li><strong>ADOPT</strong> &mdash; Technologies that are widely used and are known to excel in data science projects. If you choose these technologies,
-    you are standing on solid footing. Note that it is still necessary to weigh the pros and cons of technologies depending on the specific application scenario.</li>
-<li><strong>TRIAL</strong> &mdash; Technologies that are popular for some tasks in the context of AI. Selecting a technology
-    from this technology is slightly riskier than choosing a technology from the ADOPT category.</li>
-<li><strong>ASSESS</strong> &mdash; Promising technologies that are still new and have potential for widespread use. Technologies in this category
-    are riskier because the community still needs to gain more experiences in utilizing these technologies.</li> 
-<li><strong>HOLD</strong> &mdash; Technologies that should be avoided in new projects. A technology may be on HOLD because it has become outdated
-    or because the technology is not yet sufficiently mature.</li>
-</ul>
-
 </td><td>
 
-<h3>What is the purpose?</h3>
+<h3 id="languages">Languages</h3>
 
+<h4 id="bash">Bash</h4>
 <p>
-Choosing technologies is hard. Technology choices have to be based on the specific requirements of individual projects.
-Still, it is possible to provide some general guidance. For example, some technologies are not very suitable for data science
-and can therefore be ruled out in most cases. Similarly, there are evergreen technologies whose application is nearly risk-free.
-
-This visualization aims at giving you an overview of data science technologies and how they should be handled when starting out a new project.
+Bash is a shell language that excels at working with files and programs at the Unix system level. Many data applications
+require the successful execution of several programs or data wrangling, for which Bash is ideal. Ideally, Bash scripts should be
+relatively small. For complex file system task, other solutions should be considered.
 </p>
 
-<h3>How are the decisions made?</h3>
-
+<h4 id="c">C</h4>
 <p>
-This data science tech radar is maintained by <a href="https://datascienceblog.net">Matthias Döring</a>.
-The decisions are made based on his personal and professional experiences with the technologies.
-In order to integrate the knowledge and experience from the data science community,
-please get in touch if you feel that any technology is missing/misplaced. If you make a contribution,
-you will of course receive an honorable mention in the acknowledgements section.
+C is a low-level language that is particularly suited for all applications that work closely with the hardware of a system,
+for example operating systems such as Linux or embedded systems. However, it is not a language that is very useful for data science.
 </p>
 
-<h3>Acknowledgements</h3>
+<h4 id="cpp">C++</h4>
 <p>
-This tech radar is based on the <a href="https://github.com/zalando/tech-radar">Zalando Tech Radar</a>, which in turn is based on the
-<a href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>.
+Similarly to Java, <a href="https://isocpp.org/">C++</a> is a well-established high-level programming language. However, in contrast to Java,
+C++ is geared towards fine-grained control over system resources. For example, C++ does not have an automatic
+garbage collection but requires developers to think about how they manage memory. While C++ allows for very efficient and stable
+software, development is typically considerably slower than in other languages due to a lack of supporting libraries,
+long compile times, and the intricacies of the language. However, if performance is a prime goal of the software,
+C++ is probably the way to go. It is no coincidence that the core of <a href="https://github.com/tensorflow/tensorflow>">TensorFlow</a>
+is written in C++. While C++ is not suitable for data science tasks, it excels when engineering large-scale AI systems
+for which performance is key.
+</p>
+
+<h4 id="golang">Go</h4>
+<p>
+<a href="https://golang.org/">Go</a> is a minimalist, compiled language that was developed by Google: <a href="https://yourbasic.org/golang/advantages-over-java-python/">it is performant, type-safe, and transparent</a>. However, there is currently <a href="https://101.datascience.community/2019/04/26/golang-for-data-science/">little support for data exploration</a>,
+which means that Go is not suitable for typical data science tasks. However, <a href="https://medium.com/@calebkaiser/why-were-writing-machine-learning-infrastructure-in-go-not-python-38d6a37e2d76">Go is well-suited for infrastructure management tasks</a>, for example for model deployment.
+So, while Go will probably never become a typical language data scientists will use, it should be considered for AI engineering tasks.
+</p>
+
+<h4 id="java">Java</h4>
+<p>
+<a href="https://go.java/">Java</a> has been the most widely used high-level programming language for a long time now. Due to its virtual machine,
+Java applications are independent of the system architecture, rendering Java code highly portable. Java has an active
+community and has great ecosystems for overall software engineering, for example, due to highly developed IDEs
+that are very convenient to use. However, Java does not really support the data science process. Thus,
+Java likely only plays a role if models have to be integrated into an existing Java application.
+</p>
+
+<h4 id="javascript">JavaScript</h4>
+<p>
+<a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> is currently the dominant language when it comes
+to web development, particularly frontend development.
+So, when you are thinking about bring your data science application to a customer, it would be worthwhile to use
+a JavaScript web application (e.g. Express + React) for this purpose. For machine learning,
+JavaScript enables one to <a href="https://towardsdatascience.com/client-side-prediction-with-tensorflow-js-e143ed53235b">run deep models on the client-side</a>
+which can be useful if you know that clients can handle the load.
+</p>
+
+<h4 id="julia">Julia</h4>
+<p>
+<a href="https://julialang.org/">Julia</a> is a language that is gaining more and more traction in the data science community. The main reason for this its usability and its
+<a href="https://hackernoon.com/freeing-the-data-scientist-mind-from-the-curse-of-vectorization-julia-to-the-rescue-0c3z308v">C-like performance</a>. However, this is only possible because Julia is a compiled language. Despite its support in Jupyter notebooks, Julia will probably never become the go-to language
+for data exploration due to the lag that caused by the compilations. But, if you have demanding calculations, you should definitely evaluate Julia.
+</p>
+
+<h4 id="kotlin">Kotlin</h4>
+<p>
+Similarly to Java, <a href="https://kotlinlang.org/">Kotlin</a> is based on the Java Virtual Machine. Kotlin, however, is a leaner language than Java. For example,
+it does not enforce object-oriented development. Moreover, <a href="https://kotlinlang.org/docs/reference/android-overview.html">Kotlin is compatible with Android devices</a>, which makes it
+great for the mobile market. However, all of these areas are not very relevant for data science.
+</p>
+
+<h4 id="matlab">Matlab</h4>
+<p>
+<a href="https://www.mathworks.com/products/matlab.html">Matlab</a> is a commercial language that is geared towards
+<a href="https://tobydriscoll.net/blog/matlab-vs.-julia-vs.-python/">mathematical calculations</a>,
+which is why it has collected some users in the data science sphere. However, with Julia there is a strong, freely available
+competitor on the market.
+</p>
+
+<h4 id="php">PHP</h4>
+<p>
+Once the star of web development, <a href="https://jaxenter.com/php-tiobe-sept-2019-162096.html">PHP has fallen from grace in recent years</a>.
+This is mainly due to the wide adoption of JavaScript over PHP.
+</p>
+
+<h4 id="python">Python</h4>
+<p>
+<a href="https://www.python.org/">Python</a> is the most widely used scripting language out there. There is a very good support in terms of external libraries.
+For example, the TensorFlow, scikit-learn, numpy, and pandas packages are particularly suitable for data science.
+</p>
+
+<h4 id="r">R</h4>
+<p>
+<a href="https://www.r-project.org/">R</a> is a programming language that natively supports vectorized operations. Thus, R is ideal for all applications
+in which multi-dimensional data are relevant. Due to R's popularity in the statistical community,
+there is a plethora of libraries for visualizing, exploring, and modeling data. Overall,
+R is not as generally applicable and not as robust as other languages, which is why alternatives such as Python
+should be considered for productive systems.
+</p>
+
+<h4 id="rust">Rust</h4>
+<p>
+<a href="https://www.rust-lang.org/">Rust</a> is a compiled language that's geared towards robustness. Similarly to C++ it allows low-level management of resources, which
+will take up a lot of development time. So if you want to move fast, Rust is not for you. <a href="http://www.arewelearningyet.com/">There are a few early-stage machine learning
+    libraries available for Rust</a>, so if you are looking for performance and stability, it may be worth a shot.
+</p>
+
+<h4 id="scala">Scala</h4>
+<p>
+<a href="https://www.scala-lang.org/">Scala</a> is an object-oriented language for the Java Virtual Machine. For data science applications, there seems to be some usefulness
+with respect to big data frameworks such as Hadoop or Spark. Otherwise, Scala is not suitable for data science applications.
+</p>
+
+<h4 id="typescript">TypeScript</h4>
+<p>
+<a href="https://www.typescriptlang.org/">Typescript</a> is a variant of JavaScript that offers a typing system. The goal of TypeScript is to make
+JavaScript applications more stable. However, the question is whether the <a href="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b">additional burden during the implementation is worth it</a>. If you want to move fast, JavaScript is preferable.
 </p>
 
 </td></tr>
@@ -664,12 +760,10 @@ This tech radar is based on the <a href="https://github.com/zalando/tech-radar">
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-105375141-2', 'auto');
+  ga('create', 'UA-174459384-1', 'auto');
   ga('send', 'pageview');
 </script>
-
 <!-- TODO data mgmt: RDBMS: MySQL, Postgres, Oracle: no statement here -->
-<!-- TODO infrastructure: chef, puppet, ansible -->
-
+<!-- TODO: move AWS Lambda from Infrastruture to Data Mgmt?-->
 </body>
 </html>

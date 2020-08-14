@@ -12,6 +12,12 @@ table {
   width: 1400px;
   margin: 0 50px 0 50px;
 }
+section {
+    width:75%;
+    position:relative;
+    display: block;
+}
+
 td {
   width: 50%;
   vertical-align: top;
