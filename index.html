@@ -187,6 +187,22 @@ radar_visualization({
         moved: 0
       },
       {
+        quadrant: 2,
+        ring: 1,
+        label: "Shiny",
+        active: true,
+        link: "#shiny",
+        moved: 0
+      },
+      {
+        quadrant: 2,
+        ring: 0,
+        label: "Tableau",
+        active: true,
+        link: "#tableau",
+        moved: 0
+      },
+      {
         quadrant: 1,
         ring: 0,
         label: "Docker",
@@ -391,7 +407,7 @@ radar_visualization({
 });
 </script>
 
-<div class="section">
+<div style="margin:50px 400px 0px 50px;padding:0">
 <h3>What is the data science and AI tech radar?</h3>
 
 <p>
@@ -477,11 +493,26 @@ of models ranging from decision trees over support vector machines to k-means cl
 TensorFlow should be used.
 </p>
 
+<h4 id="shiny">Shiny</h4>
+<p>
+<a href="https://shiny.rstudio.com/">Shiny</a> is an R framework for building reactive web applications.
+It is ideally suited for situations in which R code is already available but it should be made available
+to a larger user base in such a way that users can interact with the data. Shiny is well-suited for prototyping
+or for building small applications that are used internally. For larger applications or applications
+where availability and robustness are key, other frameworks such as Node.js or Flask should be considered.
+</p>
+
 <h4 id="swagger">Swagger (OpenAPI)</h4>
 <p>
 <a href="https://swagger.io/">Swagger</a> is a framework for web API development. It is widely known for <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>,
 frontend for accessing REST API documentation written according to the Swagger/OpenAPI specifications. Since data science applications
 are often deployed in forms of APIs, this is a must-have.
+</p>
+
+<h4 id="tableau">Tableau</h4>
+<p>
+<a href="https://www.tableau.com">Tableau</a> is a commercial dashboarding solution. If you want to integrate
+data from various sources and visualize trends in the data, Tableau is probably the way to go.
 </p>
 
 <h4 id="tensorflow">TensorFlow</h4>
